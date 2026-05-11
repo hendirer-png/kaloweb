@@ -241,7 +241,7 @@ export default function ProfileSettings() {
                         type="text" 
                         value={profile.full_name}
                         onChange={(e) => setProfile({...profile, full_name: e.target.value})}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
                        />
                     </div>
                     <div className="space-y-2">
@@ -250,7 +250,7 @@ export default function ProfileSettings() {
                         type="email" 
                         value={profile.email}
                         disabled
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent outline-none font-medium text-sm transition-all opacity-50 cursor-not-allowed" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent outline-none font-medium text-sm transition-all opacity-50 cursor-not-allowed" 
                        />
                     </div>
                  </div>
@@ -277,7 +277,7 @@ export default function ProfileSettings() {
                         type="text" 
                         value={siteSettings.site_name}
                         onChange={(e) => setSiteSettings({...siteSettings, site_name: e.target.value})}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
                        />
                     </div>
                     <div className="space-y-2">
@@ -286,7 +286,7 @@ export default function ProfileSettings() {
                         type="email" 
                         value={siteSettings.support_email}
                         onChange={(e) => setSiteSettings({...siteSettings, support_email: e.target.value})}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
                        />
                     </div>
                     <div className="space-y-2">
@@ -295,7 +295,7 @@ export default function ProfileSettings() {
                         type="text" 
                         value={siteSettings.whatsapp_number}
                         onChange={(e) => setSiteSettings({...siteSettings, whatsapp_number: e.target.value})}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
                         placeholder="Contoh: 628123456789"
                        />
                     </div>
@@ -305,7 +305,7 @@ export default function ProfileSettings() {
                         type="text" 
                         value={siteSettings.address}
                         onChange={(e) => setSiteSettings({...siteSettings, address: e.target.value})}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm" 
                        />
                     </div>
                  </div>
@@ -329,7 +329,7 @@ export default function ProfileSettings() {
                         value={newType}
                         onChange={(e) => setNewType(e.target.value)}
                         placeholder="Tambah kategori baru..."
-                        className="flex-grow h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
+                        className="flex-grow h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
                        />
                        <button 
                         onClick={addProjectType}
@@ -364,7 +364,7 @@ export default function ProfileSettings() {
                             value={passwords.new_password}
                             onChange={(e) => setPasswords({...passwords, new_password: e.target.value})}
                             placeholder="Minimal 6 karakter" 
-                            className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
+                            className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
                           />
                        </div>
                        <div className="space-y-2">
@@ -374,7 +374,7 @@ export default function ProfileSettings() {
                             value={passwords.confirm_password}
                             onChange={(e) => setPasswords({...passwords, confirm_password: e.target.value})}
                             placeholder="Ulangi password baru" 
-                            className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
+                            className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all" 
                           />
                        </div>
                     </div>
@@ -406,3 +406,4 @@ export default function ProfileSettings() {
     </div>
   );
 }
+

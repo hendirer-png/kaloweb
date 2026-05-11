@@ -9,9 +9,15 @@
   --color-accent: #d6fd70;
   --color-primary-dark: #000000;
   --color-secondary-muted: #666666;
+  --color-surface-1: #f3f4f6;
+  --color-ink: #111827;
   
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
   --radius-xl: 1.5rem;
   --radius-2xl: 2rem;
+
+  --typography-body: 1rem/1.5 "Plus Jakarta Sans", sans-serif;
 }
 
 @layer base {
@@ -68,6 +74,25 @@
   .dot-square {
     @apply w-2 h-2 bg-accent rounded-sm;
   }
+
+  .text-input {
+    background-color: var(--color-surface-1);
+    color: var(--color-ink);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    @apply font-sans text-base;
+  }
+
+  .text-input:focus, .text-input-focused {
+    background-color: white;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(214, 253, 112, 0.1);
+    @apply ring-0;
+  }
 }
 
 @layer utilities {
@@ -90,6 +115,10 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .text-body {
+    font: var(--typography-body);
   }
 }
 

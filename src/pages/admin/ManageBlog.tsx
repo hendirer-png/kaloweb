@@ -187,7 +187,7 @@ export default function ManageBlog() {
                       type="text"
                       value={newPost.title}
                       onChange={(e) => setNewPost({ ...newPost, title: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="Misal: Cara Ekspor Produk UMKM"
                     />
                   </div>
@@ -197,14 +197,14 @@ export default function ManageBlog() {
                     <textarea
                       value={newPost.excerpt}
                       onChange={(e) => setNewPost({ ...newPost, excerpt: e.target.value })}
-                      className="w-full p-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm min-h-[100px]"
+                      className="w-full p-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm min-h-[100px]"
                       placeholder="Tulis ringkasan singkat artikel..."
                     />
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Thumbnail Banner</label>
-                    <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
+                    <div className="flex items-center gap-6 p-6 rounded-sm bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
                       {newPost.image_url ? (
                         <div className="w-24 h-24 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0">
                           <img src={newPost.image_url} alt="Preview" className="w-full h-full object-cover" />
@@ -242,7 +242,7 @@ export default function ManageBlog() {
                       <select
                         value={newPost.category}
                         onChange={(e) => setNewPost({ ...newPost, category: e.target.value })}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       >
                         <option value="Business">Business</option>
                         <option value="Technology">Technology</option>
@@ -256,7 +256,7 @@ export default function ManageBlog() {
                       <select
                         value={newPost.status}
                         onChange={(e) => setNewPost({ ...newPost, status: e.target.value })}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       >
                         <option value="Published">Published</option>
                         <option value="Draft">Draft</option>
@@ -372,3 +372,4 @@ export default function ManageBlog() {
     </div>
   );
 }
+

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import Button from '../ui/Button';
 import { useContent } from '../../lib/ContentContext';
+import { SearchOverlay } from '../ui/SearchOverlay';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -16,11 +17,10 @@ const navItems = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
-  const { getContent } = useContent();
-  const footerData = getContent('global_footer');
-  const brand = footerData?.brand || 'Kaloweb';
+  const brand = 'Kaloweb';
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -35,9 +35,9 @@ export default function Navbar() {
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    document.body.style.overflow = (menuOpen || searchOpen) ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
-  }, [menuOpen]);
+  }, [menuOpen, searchOpen]);
 
   const handleLinkClick = (path: string) => {
     if (window.location.pathname === path) {
@@ -85,7 +85,17 @@ export default function Navbar() {
           </div>
 
           {/* Right side */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-4">
+            {/* Search Button */}
+            <button
+              onClick={() => setSearchOpen(true)}
+              className={`p-2 rounded-full transition-colors duration-300 ${isScrolled || menuOpen ? 'text-black hover:bg-black/5' : 'text-white hover:bg-white/10'
+                }`}
+              aria-label="Search"
+            >
+              <Search size={20} />
+            </button>
+
             {/* CTA — hidden on small screens, visible md+ */}
             <div className="hidden md:block">
               <Button 
@@ -109,6 +119,8 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {/* ── Mobile / iPad Drawer ── */}
       <AnimatePresence>

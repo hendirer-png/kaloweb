@@ -791,7 +791,7 @@ export default function ManageContent() {
     if (isImageField) {
       return (
         <div className="relative group">
-          <div className="aspect-video rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden mb-3 relative">
+          <div className="aspect-video rounded-sm bg-gray-50 border border-gray-100 overflow-hidden mb-3 relative">
             {value ? (
               <img src={value as string} alt={key} className="w-full h-full object-cover" />
             ) : (
@@ -829,7 +829,7 @@ export default function ManageContent() {
           value={value}
           onChange={(e) => handleUpdateField(path, e.target.value)}
           rows={3}
-          className="w-full p-5 rounded-2xl bg-gray-50 border border-gray-200 focus:border-accent outline-none text-sm font-medium transition-all resize-none"
+          className="w-full p-5 rounded-sm bg-gray-50 border border-gray-200 focus:border-accent outline-none text-sm font-medium transition-all resize-none"
         />
       );
     }
@@ -861,7 +861,7 @@ export default function ManageContent() {
 
     if (Array.isArray(value)) {
       return (
-        <div className="space-y-4 p-4 border border-gray-200 rounded-2xl bg-gray-50/50">
+        <div className="space-y-4 p-4 border border-gray-200 rounded-sm bg-gray-50/50">
           {value.map((item, idx) => (
             <div key={idx} className="relative p-4 pt-8 border border-gray-200 bg-white rounded-xl shadow-sm">
               <div className="absolute top-2 right-2 flex gap-2">
@@ -1169,3 +1169,4 @@ export default function ManageContent() {
     </div>
   );
 }
+

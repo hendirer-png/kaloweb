@@ -138,7 +138,7 @@ export default function Expertise() {
         {/* Mobile: horizontal scroll | sm: 2-col | lg: 4-col */}
         <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar">
           {cards.map((card: any, idx: number) => (
-            <div key={idx} className="flex-shrink-0 w-[72vw] sm:w-auto snap-start">
+            <div key={idx} className="flex-shrink-0 w-[58vw] sm:w-auto snap-start">
               <ExpertiseCard card={card} idx={idx} />
             </div>
           ))}

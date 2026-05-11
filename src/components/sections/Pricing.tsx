@@ -96,7 +96,7 @@ export default function Pricing() {
           <Button variant="arrow">{buttonText}</Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
           {loading ? (
              <div className="col-span-full py-20 flex justify-center"><Loader2 className="animate-spin text-accent" size={40} /></div>
           ) : plans.map((plan, idx) => {
@@ -116,37 +116,38 @@ export default function Pricing() {
                   borderColor: isPopular ? "#d6fd70" : "#cbd5e1"
                 }}
                 transition={{ duration: 0.3 }}
-                className={`relative bg-white rounded-[2rem] border transition-all duration-300 ${isPopular ? 'border-accent shadow-[0_32px_64px_-16px_rgba(214,253,112,0.1)] pt-10 p-6 sm:pt-12 sm:p-8 md:p-10' : 'border-gray-100 p-6 sm:p-8 md:p-10 h-full shadow-sm hover:shadow-xl'}`}
+                className={`relative bg-white rounded-[1.25rem] sm:rounded-[2rem] border transition-all duration-300 ${isPopular ? 'border-accent shadow-[0_32px_64px_-16px_rgba(214,253,112,0.1)] pt-6 p-4 sm:pt-12 sm:p-8 md:p-10' : 'border-gray-100 p-4 sm:p-8 md:p-10 h-full shadow-sm hover:shadow-xl'}`}
               >
-              <div className="flex items-center gap-3 mb-6">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${isPopular ? 'bg-black' : 'bg-accent'}`}>
-                  {getIcon(idx)}
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-6">
+                <div className={`w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center ${isPopular ? 'bg-black' : 'bg-accent'}`}>
+                  <span className="scale-75 sm:scale-100">{getIcon(idx)}</span>
                 </div>
-                <span className="font-bold text-xs uppercase tracking-[0.2em]">{plan.name}</span>
+                <span className="font-bold text-[9px] sm:text-xs uppercase tracking-[0.2em]">{plan.name}</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-8 leading-relaxed">
+              <p className="text-gray-500 text-[10px] sm:text-sm mb-4 sm:mb-8 leading-relaxed">
                 {plan.description}
               </p>
 
-              <div className="flex items-baseline gap-1 mb-6 md:mb-10">
-                <span className="text-2xl md:text-4xl font-display font-bold text-black">Rp</span>
-                <span className="text-2xl md:text-4xl font-display font-bold">{plan.price}</span>
-                <span className="text-gray-400 text-xs md:text-sm">/bulan</span>
+              <div className="flex items-baseline gap-1 mb-4 sm:mb-6 md:mb-10">
+                <span className="text-lg sm:text-2xl md:text-4xl font-display font-bold text-black">Rp</span>
+                <span className="text-lg sm:text-2xl md:text-4xl font-display font-bold">{plan.price}</span>
+                <span className="text-gray-400 text-[9px] sm:text-xs md:text-sm">/bulan</span>
               </div>
 
-              <div className="space-y-4 mb-12">
+              <div className="space-y-2 sm:space-y-4 mb-6 sm:mb-12">
                 {plan.features?.map((feature: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="mt-1 w-5 h-5 rounded-full border border-gray-100 flex items-center justify-center flex-shrink-0">
-                      <Check size={10} className="text-gray-400" />
+                  <div key={i} className="flex items-start gap-2 sm:gap-3">
+                    <div className="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-gray-100 flex items-center justify-center flex-shrink-0">
+                      <Check size={8} className="text-gray-400 sm:hidden" />
+                      <Check size={10} className="text-gray-400 hidden sm:block" />
                     </div>
-                    <span className="text-sm text-gray-600">{feature}</span>
+                    <span className="text-[10px] sm:text-sm text-gray-600">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <Button variant="black" className="w-full" onClick={() => handleGetStarted(plan)}>Get Started</Button>
+              <Button variant="black" className="w-full text-[10px] sm:text-sm py-2 sm:py-3" onClick={() => handleGetStarted(plan)}>Get Started</Button>
             </motion.div>
           </ScrollReveal>
           )})}

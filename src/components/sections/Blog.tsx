@@ -82,13 +82,12 @@ export default function Blog() {
             <p className="text-gray-400 text-sm font-medium">Belum ada artikel yang dipublikasikan.</p>
           </div>
         ) : (
-          <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar text-left">
-            {/* Mobile: horizontal scroll | sm: 2-col | md: 3-col */}
+          <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar text-left">
             {posts.map((post, idx) => (
-              <div key={post.id} className="flex-shrink-0 w-[72vw] sm:w-auto snap-start">
+              <div key={post.id} className="flex-shrink-0 w-[58vw] sm:w-auto snap-start">
                 <Link
                   to={`/blog/${post.id}`}
-                  className="group block aspect-[1/1.2] rounded-[1.5rem] overflow-hidden shadow-sm bg-gray-100 relative"
+                  className="group block aspect-[1/1.2] rounded-[1rem] sm:rounded-[1.5rem] overflow-hidden shadow-sm bg-gray-100 relative"
                 >
                   {post.image_url ? (
                     <img
@@ -104,12 +103,12 @@ export default function Blog() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   {post.category && (
-                    <div className="absolute top-4 left-4 bg-accent px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest text-black">
+                    <div className="absolute top-2.5 sm:top-4 left-2.5 sm:left-4 bg-accent px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-black">
                       {post.category}
                     </div>
                   )}
-                  <div className="absolute inset-x-5 bottom-5 text-left">
-                    <h3 className="text-sm md:text-base font-display font-bold text-white group-hover:text-accent transition-colors leading-tight">
+                  <div className="absolute inset-x-3 sm:inset-x-5 bottom-3 sm:bottom-5 text-left">
+                    <h3 className="text-[11px] sm:text-sm md:text-base font-display font-bold text-white group-hover:text-accent transition-colors leading-tight">
                       {post.title}
                     </h3>
                   </div>

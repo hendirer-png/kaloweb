@@ -268,7 +268,7 @@ export default function ManageTeam() {
                       type="text"
                       value={newMember.name}
                       onChange={(e) => setNewMember({ ...newMember, name: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="Misal: John Doe"
                     />
                   </div>
@@ -278,7 +278,7 @@ export default function ManageTeam() {
                       type="text"
                       value={newMember.role}
                       onChange={(e) => setNewMember({ ...newMember, role: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="Misal: CEO / Developer"
                     />
                   </div>
@@ -286,7 +286,7 @@ export default function ManageTeam() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Foto Anggota</label>
-                  <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
+                  <div className="flex items-center gap-6 p-6 rounded-sm bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
                     {newMember.image_url ? (
                       <div className="w-24 h-24 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0">
                         <img src={newMember.image_url} alt="Preview" className="w-full h-full object-cover" />
@@ -337,3 +337,4 @@ export default function ManageTeam() {
     </div>
   );
 }
+

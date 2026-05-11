@@ -156,7 +156,7 @@ export default function ManagePricing() {
         ) : plans.map((plan) => (
           <div key={plan.id} className="bg-white rounded-[2.5rem] border border-gray-100 p-8 shadow-sm flex flex-col hover:border-accent transition-all group">
              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-gray-50 flex items-center justify-center text-black">
+                <div className="w-12 h-12 rounded-sm bg-gray-50 flex items-center justify-center text-black">
                    <DollarSign size={24} />
                 </div>
                 <div className="flex gap-2">
@@ -205,23 +205,23 @@ export default function ManagePricing() {
                  <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-2">
                        <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Nama Paket</label>
-                       <input type="text" value={newPlan.name} onChange={(e) => setNewPlan({...newPlan, name: e.target.value})} className="w-full h-14 px-6 rounded-2xl bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Contoh: Growth Plan" />
+                       <input type="text" value={newPlan.name} onChange={(e) => setNewPlan({...newPlan, name: e.target.value})} className="w-full h-14 px-6 rounded-sm bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Contoh: Growth Plan" />
                     </div>
                     <div className="space-y-2">
                        <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Harga (Rp)</label>
-                       <input type="text" value={newPlan.price} onChange={(e) => setNewPlan({...newPlan, price: e.target.value})} className="w-full h-14 px-6 rounded-2xl bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Contoh: 2.500.000" />
+                       <input type="text" value={newPlan.price} onChange={(e) => setNewPlan({...newPlan, price: e.target.value})} className="w-full h-14 px-6 rounded-sm bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Contoh: 2.500.000" />
                     </div>
                  </div>
 
                  <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Deskripsi Singkat</label>
-                    <textarea value={newPlan.description} onChange={(e) => setNewPlan({...newPlan, description: e.target.value})} className="w-full h-32 p-6 rounded-2xl bg-gray-50 border-none outline-none font-medium text-sm resize-none" placeholder="Jelaskan target market paket ini..." />
+                    <textarea value={newPlan.description} onChange={(e) => setNewPlan({...newPlan, description: e.target.value})} className="w-full h-32 p-6 rounded-sm bg-gray-50 border-none outline-none font-medium text-sm resize-none" placeholder="Jelaskan target market paket ini..." />
                  </div>
 
                  <div className="space-y-4">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Fitur & Keunggulan</label>
                     <div className="flex gap-2">
-                       <input type="text" value={featureInput} onChange={(e) => setFeatureInput(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && addFeature()} className="flex-grow h-14 px-6 rounded-2xl bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Tambah fitur..." />
+                       <input type="text" value={featureInput} onChange={(e) => setFeatureInput(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && addFeature()} className="flex-grow h-14 px-6 rounded-sm bg-gray-50 border-none outline-none font-medium text-sm" placeholder="Tambah fitur..." />
                        <button onClick={addFeature} className="w-14 h-14 bg-black text-white rounded-2xl flex items-center justify-center hover:bg-accent hover:text-black transition-all"><Plus size={20} /></button>
                     </div>
                     <div className="space-y-2">
@@ -248,3 +248,4 @@ export default function ManagePricing() {
     </div>
   );
 }
+

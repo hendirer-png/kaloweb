@@ -183,7 +183,7 @@ export default function ManageTestimonials() {
                         type="text"
                         value={newTestimonial.author_name}
                         onChange={(e) => setNewTestimonial({ ...newTestimonial, author_name: e.target.value })}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
                       />
                     </div>
                     <div className="space-y-2">
@@ -192,14 +192,14 @@ export default function ManageTestimonials() {
                         type="text"
                         value={newTestimonial.author_role}
                         onChange={(e) => setNewTestimonial({ ...newTestimonial, author_role: e.target.value })}
-                        className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
+                        className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Avatar Profile</label>
-                    <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
+                    <div className="flex items-center gap-6 p-6 rounded-sm bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
                       <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md flex-shrink-0">
                         <img
                           src={newTestimonial.avatar_url || `https://ui-avatars.com/api/?name=${newTestimonial.author_name || 'User'}&background=F7FF58&color=000`}
@@ -233,7 +233,7 @@ export default function ManageTestimonials() {
                     <textarea
                       value={newTestimonial.content}
                       onChange={(e) => setNewTestimonial({ ...newTestimonial, content: e.target.value })}
-                      className="w-full p-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm min-h-[120px]"
+                      className="w-full p-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm min-h-[120px]"
                     />
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function ManageTestimonials() {
           >
             <div className="flex items-start justify-between mb-8">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gray-50 overflow-hidden border border-gray-100 flex-shrink-0">
+                <div className="w-14 h-14 rounded-sm bg-gray-50 overflow-hidden border border-gray-100 flex-shrink-0">
                   <img src={t.avatar_url || `https://ui-avatars.com/api/?name=${t.author_name}&background=F7FF58&color=000`} alt={t.author_name} className="w-full h-full object-cover" />
                 </div>
                 <div>
@@ -317,3 +317,4 @@ export default function ManageTestimonials() {
     </div>
   );
 }
+

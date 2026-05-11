@@ -101,14 +101,12 @@ export default function Services() {
               whileHover={{ y: -6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group relative bg-gray-50/50 rounded-[1.5rem] p-4 sm:p-6 md:p-7 flex flex-col border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-[0_12px_30px_-15px_rgba(0,0,0,0.08)] transition-all duration-500 overflow-hidden flex-shrink-0 w-[75vw] sm:w-[60vw] md:w-auto snap-start min-h-[260px] md:min-h-[280px]"
+              className="group relative bg-gray-50/50 rounded-[1.25rem] sm:rounded-[1.5rem] p-3 sm:p-6 md:p-7 flex flex-col border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-[0_12px_30px_-15px_rgba(0,0,0,0.08)] transition-all duration-500 overflow-hidden flex-shrink-0 w-[62vw] sm:w-[60vw] md:w-auto snap-start min-h-[200px] sm:min-h-[260px] md:min-h-[280px]"
             >
               {/* Image at the top */}
-              <div className="relative w-full mb-6 md:mb-8">
+              <div className="relative w-full mb-3 sm:mb-6 md:mb-8">
                 <motion.div
-                  animate={{ 
-                    y: hoveredIdx === idx ? -4 : 0
-                  }}
+                  animate={{ y: hoveredIdx === idx ? -4 : 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   className="rounded-none overflow-hidden relative shadow-md bg-gray-200 aspect-[16/10]"
                 >
@@ -123,22 +121,24 @@ export default function Services() {
 
               {/* Content below */}
               <div className="flex-grow">
-                <div className="w-9 h-9 md:w-10 md:h-10 bg-white shadow-sm flex items-center justify-center rounded-lg mb-4 md:mb-6 group-hover:shadow-md transition-shadow">
-                  <service.icon size={18} className="text-black" />
+                <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white shadow-sm flex items-center justify-center rounded-lg mb-2 sm:mb-4 md:mb-6 group-hover:shadow-md transition-shadow">
+                  <service.icon size={14} className="text-black sm:hidden" />
+                  <service.icon size={18} className="text-black hidden sm:block" />
                 </div>
-                <h3 className="text-base sm:text-lg md:text-2xl font-display font-bold tracking-tight leading-tight mb-2 md:mb-3">{service.title}</h3>
-                <p className="text-gray-500 text-xs md:text-sm leading-relaxed max-w-[95%] mb-4 md:mb-6">
+                <h3 className="text-sm sm:text-lg md:text-2xl font-display font-bold tracking-tight leading-tight mb-1 sm:mb-2 md:mb-3">{service.title}</h3>
+                <p className="text-gray-500 text-[10px] sm:text-xs md:text-sm leading-relaxed max-w-[95%] mb-2 sm:mb-4 md:mb-6">
                   {service.description}
                 </p>
               </div>
 
-              <div className="mt-auto pt-4 md:pt-6 border-t border-gray-100 flex items-center justify-between">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 group-hover:text-black transition-colors">Learn more</span>
+              <div className="mt-auto pt-2 sm:pt-4 md:pt-6 border-t border-gray-100 flex items-center justify-between">
+                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-black/40 group-hover:text-black transition-colors">Learn more</span>
                 <motion.div
                   animate={{ x: hoveredIdx === idx ? 0 : -4, opacity: hoveredIdx === idx ? 1 : 0.4 }}
                   className="text-black"
                 >
-                  <ArrowRight size={18} />
+                  <ArrowRight size={14} className="sm:hidden" />
+                  <ArrowRight size={18} className="hidden sm:block" />
                 </motion.div>
               </div>
             </motion.div>

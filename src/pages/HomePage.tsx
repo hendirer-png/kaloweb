@@ -8,6 +8,7 @@ import Pricing from '../components/sections/Pricing';
 import OtherServices from '../components/sections/OtherServices';
 import FAQ from '../components/sections/FAQ';
 import Testimonials from '../components/sections/Testimonials';
+import Team from '../components/sections/Team';
 import Blog from '../components/sections/Blog';
 import CTA from '../components/sections/CTA';
 
@@ -24,6 +25,7 @@ export default function HomePage() {
       <OtherServices />
       <FAQ />
       <Testimonials />
+      <Team />
       <Blog />
       <CTA />
     </>

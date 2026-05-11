@@ -74,24 +74,25 @@ export default function Team() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10"
+            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 md:gap-10"
           >
             {team.map((member, i) => (
                 <motion.div 
                   key={member.id || i} 
                   variants={fadeIn}
-                  className="bg-gray-50 rounded-[1.5rem] overflow-hidden group p-2 transition-colors hover:bg-gray-100"
+                  className="bg-gray-50 rounded-[1rem] sm:rounded-[1.5rem] overflow-hidden group p-1.5 sm:p-2 transition-colors hover:bg-gray-100"
                 >
-                  <div className="p-6 md:p-8 flex justify-between items-start">
+                  <div className="p-3 sm:p-6 md:p-8 flex justify-between items-start">
                       <div>
-                        <h3 className="text-lg md:text-xl font-display font-bold leading-tight mb-1.5 tracking-tight">{member.name}</h3>
-                        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">{member.role}</p>
+                        <h3 className="text-sm sm:text-lg md:text-xl font-display font-bold leading-tight mb-1 sm:mb-1.5 tracking-tight">{member.name}</h3>
+                        <p className="text-[8px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">{member.role}</p>
                       </div>
-                      <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-accent group-hover:text-black transition-all">
-                        <ArrowUpRight size={18} />
+                      <div className="w-7 h-7 sm:w-10 sm:h-10 bg-black rounded-full flex items-center justify-center text-white cursor-pointer group-hover:bg-accent group-hover:text-black transition-all flex-shrink-0">
+                        <ArrowUpRight size={13} className="sm:hidden" />
+                        <ArrowUpRight size={18} className="hidden sm:block" />
                       </div>
                   </div>
-                  <div className="aspect-[4/5] rounded-[1rem] overflow-hidden m-2">
+                  <div className="aspect-[4/5] rounded-[0.75rem] sm:rounded-[1rem] overflow-hidden m-1.5 sm:m-2">
                       <img src={member.image_url || 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=400'} alt={member.name} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                   </div>
                 </motion.div>

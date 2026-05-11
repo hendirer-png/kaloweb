@@ -75,7 +75,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="nopianh57@gmail.com"
-                  className="w-full h-14 pl-12 pr-6 rounded-2xl bg-gray-50 border border-gray-100 focus:border-accent focus:bg-white outline-none transition-all text-sm font-medium"
+                  className="w-full h-14 pl-12 pr-6 rounded-sm bg-gray-50 border border-gray-100 focus:border-accent focus:bg-white outline-none transition-all text-sm font-medium"
                   required
                 />
               </div>
@@ -90,7 +90,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full h-14 pl-12 pr-12 rounded-2xl bg-gray-50 border border-gray-100 focus:border-accent focus:bg-white outline-none transition-all text-sm font-medium"
+                  className="w-full h-14 pl-12 pr-12 rounded-sm bg-gray-50 border border-gray-100 focus:border-accent focus:bg-white outline-none transition-all text-sm font-medium"
                   required
                 />
                 <button
@@ -134,3 +134,4 @@ export default function LoginPage() {
     </div>
   );
 }
+

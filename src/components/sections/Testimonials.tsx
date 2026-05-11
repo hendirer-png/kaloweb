@@ -91,7 +91,7 @@ export default function Testimonials() {
               {doubleTestimonials.map((item, idx) => (
                 <div 
                   key={idx} 
-                  className="flex-shrink-0 w-[200px] sm:w-[260px] md:w-[320px] aspect-[10/13] relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden group shadow-xl"
+                  className="flex-shrink-0 w-[150px] sm:w-[260px] md:w-[320px] aspect-[10/13] relative rounded-[1rem] sm:rounded-[2rem] overflow-hidden group shadow-xl"
                 >
                     <img 
                       src={item.avatar_url || `https://ui-avatars.com/api/?name=${item.author_name}&background=F7FF58&color=000`} 
@@ -101,18 +101,18 @@ export default function Testimonials() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                     
-                    <div className="absolute top-6 left-6">
-                       <div className="px-2.5 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white text-[7px] font-bold tracking-[0.2em] uppercase">
+                    <div className="absolute top-3 sm:top-6 left-3 sm:left-6">
+                       <div className="px-2 py-0.5 sm:px-2.5 sm:py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-white text-[6px] sm:text-[7px] font-bold tracking-[0.2em] uppercase">
                           {item.author_role.split(' ')[0]}
                        </div>
                     </div>
 
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                       <Quote size={24} className="mb-3 opacity-30 fill-white" />
-                       <p className="text-sm md:text-base font-display font-medium mb-5 leading-relaxed">"{item.content}"</p>
+                    <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 text-white">
+                       <Quote size={14} className="mb-1.5 sm:mb-3 opacity-30 fill-white sm:size-6" />
+                       <p className="text-[10px] sm:text-sm md:text-base font-display font-medium mb-2 sm:mb-5 leading-relaxed">"{item.content}"</p>
                        <div>
-                          <p className="font-bold text-[11px] tracking-tight">{item.author_name}</p>
-                          <p className="text-[8px] opacity-60 uppercase tracking-widest">{item.author_role}</p>
+                          <p className="font-bold text-[9px] sm:text-[11px] tracking-tight">{item.author_name}</p>
+                          <p className="text-[7px] sm:text-[8px] opacity-60 uppercase tracking-widest">{item.author_role}</p>
                        </div>
                     </div>
                 </div>

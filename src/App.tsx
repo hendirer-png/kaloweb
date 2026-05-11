@@ -10,6 +10,7 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import OnlineStorePage from './pages/OnlineStorePage';
 import CustomServicePage from './pages/CustomServicePage';
 import CheckoutPage from './pages/CheckoutPage';
+import StyleguidePage from './pages/StyleguidePage';
 
 // Admin Pages
 import LoginPage from './pages/admin/LoginPage';
@@ -48,6 +49,7 @@ function AppContent() {
           <Route path="/layanan-toko-online" element={<OnlineStorePage />} />
           <Route path="/layanan-custom" element={<CustomServicePage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/styleguide" element={<StyleguidePage />} />
           
           {/* Admin Auth */}
           <Route path="/login" element={<LoginPage />} />

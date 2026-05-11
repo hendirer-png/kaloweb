@@ -292,7 +292,7 @@ export default function ManagePortfolio() {
                       type="text"
                       value={newProject.title}
                       onChange={(e) => setNewProject({ ...newProject, title: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="Misal: Shoda Apps"
                     />
                   </div>
@@ -302,7 +302,7 @@ export default function ManagePortfolio() {
                       type="text"
                       value={newProject.client_name}
                       onChange={(e) => setNewProject({ ...newProject, client_name: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="Nama Perusahaan"
                     />
                   </div>
@@ -314,7 +314,7 @@ export default function ManagePortfolio() {
                     <select
                       value={newProject.project_type}
                       onChange={(e) => setNewProject({ ...newProject, project_type: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all appearance-none"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all appearance-none"
                     >
                       {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
                     </select>
@@ -325,7 +325,7 @@ export default function ManagePortfolio() {
                       type="url"
                       value={newProject.project_url}
                       onChange={(e) => setNewProject({ ...newProject, project_url: e.target.value })}
-                      className="w-full h-14 px-6 rounded-2xl bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
+                      className="w-full h-14 px-6 rounded-sm bg-gray-50 border border-transparent focus:border-accent outline-none font-medium text-sm transition-all"
                       placeholder="https://client-web.com"
                     />
                   </div>
@@ -333,7 +333,7 @@ export default function ManagePortfolio() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 ml-4">Thumbnail Image</label>
-                  <div className="flex items-center gap-6 p-6 rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
+                  <div className="flex items-center gap-6 p-6 rounded-sm bg-gray-50 border-2 border-dashed border-gray-200 hover:border-accent transition-all group relative">
                     {newProject.image_url ? (
                       <div className="w-24 h-24 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0">
                         <img src={newProject.image_url} alt="Preview" className="w-full h-full object-cover" />
@@ -384,4 +384,5 @@ export default function ManagePortfolio() {
     </div>
   );
 }
+
 

@@ -104,7 +104,7 @@ export default function DashboardOverview() {
                   className="p-8 rounded-[2.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all group"
                >
                   <div className="flex items-center justify-between mb-8">
-                     <div className={`p-4 rounded-2xl bg-gray-50 group-hover:bg-black group-hover:text-white transition-colors`}>
+                     <div className={`p-4 rounded-sm bg-gray-50 group-hover:bg-black group-hover:text-white transition-colors`}>
                         <stat.icon size={24} />
                      </div>
                      <div className="flex items-center gap-1 text-[10px] font-bold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">
@@ -203,3 +203,4 @@ export default function DashboardOverview() {
       </div>
    );
 }
+
